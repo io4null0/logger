@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ログ記録ページ</title>
+</head>
+<body>
+    <script>
+        function logAccess() {
+            const now = new Date();
+            const page = window.location.href;
+            const logData = {
+                time: now.toISOString(),
+                page: page
+            };
+            const logs = JSON.parse(localStorage.getItem('accessLogs')) || [];
+            logs.push(logData);
+            localStorage.setItem('accessLogs', JSON.stringify(logs));
+        }
+        logAccess();
+    </script>
+</body>
+</html>
