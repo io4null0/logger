@@ -1,22 +1,12 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>ログ記録ページ</title>
+<title>�A�N�Z�X���O - locview.cgi</title>
 </head>
 <body>
-    <script>
-        function logAccess() {
-            const now = new Date();
-            const page = window.location.href;
-            const logData = {
-                time: now.toISOString(),
-                page: page
-            };
-            const logs = JSON.parse(localStorage.getItem('accessLogs')) || [];
-            logs.push(logData);
-            localStorage.setItem('accessLogs', JSON.stringify(logs));
-        }
-        logAccess();
-    </script>
+ 
+<center>
+<h2>���̃y�[�W�̓A�N�Z�X�󋵂��L�^���Ă��܂�</h2>
+���O������ �� <a href="./logview1.cgi">logview1.cgi</a>
+</center>
 </body>
-</html>
+</html
